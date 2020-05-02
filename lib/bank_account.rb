@@ -12,8 +12,14 @@ class BankAccount
   def display_balance 
    "Your balance is $#{self.balance}."
   end 
-  
+  # expect(avi.valid?).to eq(true)
+  #     expect(@broke.valid?).to eq(false)
+  #     expect(@closed.valid?).to eq(false)
   def valid? 
-   status==open? && balance > 0 =! valid
+   status=="open" && balance > 0 
   end 
+  
+  def close_account 
+    self.status ="closed"
   end
+end 
