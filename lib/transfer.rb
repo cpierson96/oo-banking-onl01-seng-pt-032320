@@ -7,6 +7,6 @@ class Transfer
     @amount = 50
 end
   def valid?
-  transfer.self == true 
+ sender.valid? && receiver.valid? 
   end 
 end 
